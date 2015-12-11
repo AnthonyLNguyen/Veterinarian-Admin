@@ -88,14 +88,16 @@ public abstract class Animal implements Serializable, Comparable<Animal> {
 
 	public String medToString() {
 		if (medicalHistory.isEmpty()){
-			return "";
+			return "NONE";
 		}
 		ArrayList<MedicalRecord> list = medicalHistory;
 
 		String listString = "| ";
 
 		for (MedicalRecord s : list) {
-			listString += s.getInfo() + " | ";
+			if (s.isCurrent())
+			listString += "[CURRENT]";
+			listString += s.getInfo()+ " | ";
 		}
 
 		return listString;
