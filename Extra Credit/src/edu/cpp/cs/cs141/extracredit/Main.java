@@ -19,6 +19,8 @@ package edu.cpp.cs.cs141.extracredit;
  */
 
 /**
+ * Main class creates an {@link Engine} and a {@link UserInterface}
+ * 
  * @author Anthony Nguyen
  *
  */

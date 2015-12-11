@@ -22,11 +22,11 @@ import java.util.ArrayList;
  */
 
 /**
+ * The engine is used purely to add appointments, animals, and owners to an
+ * array list that can be accessed by the UserInput class to print out certain
+ * information.
+ * 
  * @author Anthony Nguyen
- *
- */
-/**
- * @author antho
  *
  */
 public class Engine implements Serializable {
@@ -40,11 +40,17 @@ public class Engine implements Serializable {
 	private ArrayList<Animal> petList = new ArrayList<Animal>();
 
 	/**
-	 * Creates an appointment and adds it to {@link #getAppList() the appointment list}
-	 * @param date Date of the appointment
-	 * @param time Time of the appointment
-	 * @param pet The pet
-	 * @param owner The owner
+	 * Creates an appointment and adds it to {@link #getAppList() the
+	 * appointment list}
+	 * 
+	 * @param date
+	 *            Date of the appointment
+	 * @param time
+	 *            Time of the appointment
+	 * @param pet
+	 *            The pet
+	 * @param owner
+	 *            The owner
 	 * @return The appointment that was created
 	 */
 	public Appointment createAppointment(String date, String time, Animal pet, Owner owner) {
@@ -76,11 +82,17 @@ public class Engine implements Serializable {
 
 	/**
 	 * Creates a pet and adds it to {@link #getPetList() the pet list}
-	 * @param species What animal?
-	 * @param owner The owner
-	 * @param name The name
-	 * @param age The age in years
-	 * @param type The breed of animal
+	 * 
+	 * @param species
+	 *            What animal?
+	 * @param owner
+	 *            The owner
+	 * @param name
+	 *            The name
+	 * @param age
+	 *            The age in years
+	 * @param type
+	 *            The breed of animal
 	 * @return
 	 */
 	public Animal createPet(int species, Owner owner, String name, int age, int type) {

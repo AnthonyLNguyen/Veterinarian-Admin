@@ -21,7 +21,9 @@ import java.io.Serializable;
  */
 
 /**
- * Represents an appointment and has fields for the date, time, which pet, the owner, and if it is completed or not.
+ * Represents an appointment and has fields for the date, time, which pet, the
+ * owner, and if it is completed or not.
+ * 
  * @author Anthony Nguyen
  *
  */
@@ -36,7 +38,7 @@ public class Appointment implements Serializable {
 	private Animal pet;
 	private Owner owner;
 	private boolean complete = false;
-	
+
 	public Appointment(String date, String time, Animal pet, Owner owner) {
 		super();
 		this.date = date;
@@ -76,17 +78,17 @@ public class Appointment implements Serializable {
 	public void setOwner(Owner owner) {
 		this.owner = owner;
 	}
-	
-	public void resolveAppointment(){
+
+	public void resolveAppointment() {
 		complete = true;
 	}
-	
+
 	/**
 	 * 
 	 * @return A string that denotes whether or not the appointment is resolved.
 	 */
-	public String getCompletion(){
+	public String getCompletion() {
 		return complete ? "[RESOLVED]" : "[OUTSTANDING]";
 	}
-	
+
 }

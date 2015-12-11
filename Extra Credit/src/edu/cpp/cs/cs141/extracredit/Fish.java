@@ -21,6 +21,8 @@ import java.io.Serializable;
  */
 
 /**
+ * This class represents a fish which can be of 5 types of fish
+ * 
  * @author Anthony Nguyen
  *
  */
@@ -30,8 +32,8 @@ public class Fish extends Animal implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 3031023217833471205L;
-	private static String[] types = {"Gold", "Koi", "Clown", "Puffer", "Angel"};
-	
+	private static String[] types = { "Gold", "Koi", "Clown", "Puffer", "Angel" };
+
 	public Fish(Owner owner, String name, int age, int type) {
 		super(owner, name, age, type);
 		setSpecies("Fish");
@@ -41,11 +43,11 @@ public class Fish extends Animal implements Serializable {
 	/**
 	 * @return A string that displays all of the different breed of fish.
 	 */
-	public static String typeList(){
+	public static String typeList() {
 		String s = "";
-		for (int i = 0 ; i < 5 ; i++)
+		for (int i = 0; i < 5; i++)
 			s += i + ". " + types[i] + " ";
 		return s;
 	}
-	
+
 }

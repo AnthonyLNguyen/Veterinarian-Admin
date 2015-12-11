@@ -20,7 +20,7 @@ import java.io.Serializable;
  *
  */
 
-/**
+/**This class represents a dog which can be of 5 types of dog
  * @author Anthony Nguyen
  *
  */

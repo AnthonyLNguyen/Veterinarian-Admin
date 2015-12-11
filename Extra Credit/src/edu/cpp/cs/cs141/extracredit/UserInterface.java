@@ -24,6 +24,8 @@ import java.util.Scanner;
  */
 
 /**
+ * Takes input from the user and prints our information.
+ * 
  * @author Anthony Nguyen
  *
  */
@@ -108,7 +110,7 @@ public class UserInterface {
 	}
 
 	/**
-	 * Switch with options to 1. Add owner 2. Remove owner 3. List owners 4.
+	 * Switch with options to 1. Add owner 2.List owner pets 3. List owners 4.
 	 * Owner Options 5. Return
 	 */
 	public void owners() {
@@ -121,6 +123,8 @@ public class UserInterface {
 				selected = false;
 				break;
 			case 2:
+				chooseOwner();
+				listPets();
 				selected = false;
 				break;
 			case 3:
@@ -727,7 +731,8 @@ public class UserInterface {
 	}
 
 	/**
-	 * Prints the info of a certain arrayList. {@link Appointment}, {@link Owner}, or {@link Animal}
+	 * Prints the info of a certain arrayList. {@link Appointment},
+	 * {@link Owner}, or {@link Animal}
 	 * 
 	 * @param option
 	 *            What type of list
@@ -754,8 +759,11 @@ public class UserInterface {
 	}
 
 	/**
-	 * Prints out the single info of a {@link Appointment}, {@link Owner}, or {@link Animal}
-	 * @param o {@link Appointment}, {@link Owner}, or {@link Animal}
+	 * Prints out the single info of a {@link Appointment}, {@link Owner}, or
+	 * {@link Animal}
+	 * 
+	 * @param o
+	 *            {@link Appointment}, {@link Owner}, or {@link Animal}
 	 */
 	public void printInfo(Object o) {
 		if (o instanceof Appointment) {
@@ -776,7 +784,8 @@ public class UserInterface {
 	}
 
 	/**
-	 * My way of avoiding when the user inputs something other than an integer. Catches the {@link InputMismatchException}
+	 * My way of avoiding when the user inputs something other than an integer.
+	 * Catches the {@link InputMismatchException}
 	 * 
 	 * @return A user inputted integer
 	 */
@@ -792,7 +801,8 @@ public class UserInterface {
 			} catch (InputMismatchException e) {
 				System.out.println("Input is not a valid integer!");
 				input.next();
-			}}
+			}
+		}
 	}
 
 }

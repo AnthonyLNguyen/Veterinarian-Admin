@@ -21,29 +21,32 @@ import java.io.*;
  */
 
 /**
+ * Used to save and load
+ * 
  * @author Anthony Nguyen
  *
  */
-public class Save implements Serializable{
-	
+public class Save implements Serializable {
+
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = -7361935344923958807L;
 	Engine engine;
-	
-	public Save (){
+
+	public Save() {
 		engine = null;
 	}
+
 	public Save(Engine g) {
 		setState(g);
 	}
-	
-	public void setState (Engine g) {
+
+	public void setState(Engine g) {
 		engine = g;
 	}
-	
-	public void save(String gameStateName){
+
+	public void save(String gameStateName) {
 		FileOutputStream fos;
 		try {
 			fos = new FileOutputStream(gameStateName + ".dat");
@@ -54,7 +57,7 @@ public class Save implements Serializable{
 			e.printStackTrace();
 		}
 	}
-	
+
 	public Engine load(String stateName) {
 		FileInputStream fis;
 		try {
@@ -69,10 +72,5 @@ public class Save implements Serializable{
 		}
 		return engine;
 	}
-	
-	
-	
-	
 
-	
 }
