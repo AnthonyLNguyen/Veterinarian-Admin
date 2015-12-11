@@ -19,6 +19,7 @@ public class Appointment implements Serializable {
 	private String time;
 	private Animal pet;
 	private Owner owner;
+	private boolean complete = false;
 	
 	public Appointment(String date, String time, Animal pet, Owner owner) {
 		super();
@@ -58,6 +59,14 @@ public class Appointment implements Serializable {
 
 	public void setOwner(Owner owner) {
 		this.owner = owner;
+	}
+	
+	public void resolveAppointment(){
+		complete = true;
+	}
+	
+	public String getCompletion(){
+		return complete ? "[RESOLVED]" : "[OUTSTANDING]";
 	}
 	
 }

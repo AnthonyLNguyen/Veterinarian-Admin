@@ -23,6 +23,7 @@ public class Engine implements Serializable{
 	public Appointment createAppointment(String date, String time, Animal pet, Owner owner) {
 		Appointment a =new Appointment(date, time, pet, owner);
 		addAppointment(a);
+		pet.getAppointments().add(a);
 		return a;
 	}
 	

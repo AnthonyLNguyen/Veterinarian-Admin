@@ -20,6 +20,7 @@ public abstract class Animal implements Serializable, Comparable<Animal> {
 	private Owner owner;
 	private String name;
 	private int age;
+	private ArrayList<Appointment> appointments = new ArrayList<Appointment>();
 	private ArrayList<MedicalRecord> medicalHistory = new ArrayList<MedicalRecord>();
 	private ArrayList<String> vaccinations = new ArrayList<String>();
 	private int type;
@@ -140,6 +141,28 @@ public abstract class Animal implements Serializable, Comparable<Animal> {
 
 	public void setTypes(String[] types) {
 		this.types = types;
+	}
+
+	public ArrayList<Appointment> getAppointments() {
+		return appointments;
+	}
+	
+	public String appToString() {
+		if (appointments.isEmpty()){
+			return "NONE";
+		}
+		ArrayList<Appointment> list = appointments;
+
+		String listString = "| ";
+		for (Appointment s : list) {
+			listString += list.indexOf(s) + s.getTime() + " " + s.getDate()+ " | ";
+		}
+
+		return listString;
+	}
+
+	public void setAppointments(ArrayList<Appointment> appointments) {
+		this.appointments = appointments;
 	}
 
 }
