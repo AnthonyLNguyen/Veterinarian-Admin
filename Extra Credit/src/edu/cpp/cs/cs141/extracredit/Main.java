@@ -4,7 +4,22 @@
 package edu.cpp.cs.cs141.extracredit;
 
 /**
- * @author antho
+ * 
+ *
+ * CS 141: Introduction to Programming and Problem Solving
+ * Professor: Edwin Rodr&iacute;guez
+ *
+ * Programming Assignment EXTRA CREDIT
+ *
+ * Administration program for a veterinary office. Can be used to make appointments.
+ *
+ * Anthony Nguyen
+ *
+ *
+ */
+
+/**
+ * @author Anthony Nguyen
  *
  */
 public class Main {

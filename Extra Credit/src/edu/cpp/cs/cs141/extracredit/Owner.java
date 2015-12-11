@@ -7,7 +7,25 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
- * @author antho
+ * 
+ *
+ * CS 141: Introduction to Programming and Problem Solving
+ * Professor: Edwin Rodr&iacute;guez
+ *
+ * Programming Assignment EXTRA CREDIT
+ *
+ * Administration program for a veterinary office. Can be used to make appointments.
+ *
+ * Anthony Nguyen
+ *
+ *
+ */
+
+/**
+ * Represents the owner which has fields for their name, address, phone number,
+ * and list of all their pets.
+ * 
+ * @author Anthony Nguyen
  *
  */
 public class Owner implements Serializable {
@@ -77,9 +95,8 @@ public class Owner implements Serializable {
 
 	public String petsToString() {
 		String listString = "| ";
-		for (Animal p : pets)
-		{
-		    listString += p.getName() + " | ";
+		for (Animal p : pets) {
+			listString += p.getName() + " | ";
 		}
 
 		return listString;

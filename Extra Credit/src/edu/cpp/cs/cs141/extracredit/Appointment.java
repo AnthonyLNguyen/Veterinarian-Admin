@@ -6,7 +6,23 @@ package edu.cpp.cs.cs141.extracredit;
 import java.io.Serializable;
 
 /**
- * @author antho
+ * 
+ *
+ * CS 141: Introduction to Programming and Problem Solving
+ * Professor: Edwin Rodr&iacute;guez
+ *
+ * Programming Assignment EXTRA CREDIT
+ *
+ * Administration program for a veterinary office. Can be used to make appointments.
+ *
+ * Anthony Nguyen
+ *
+ *
+ */
+
+/**
+ * Represents an appointment and has fields for the date, time, which pet, the owner, and if it is completed or not.
+ * @author Anthony Nguyen
  *
  */
 public class Appointment implements Serializable {
@@ -65,6 +81,10 @@ public class Appointment implements Serializable {
 		complete = true;
 	}
 	
+	/**
+	 * 
+	 * @return A string that denotes whether or not the appointment is resolved.
+	 */
 	public String getCompletion(){
 		return complete ? "[RESOLVED]" : "[OUTSTANDING]";
 	}

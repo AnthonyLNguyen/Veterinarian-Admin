@@ -7,7 +7,28 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
- * @author antho
+ * 
+ *
+ * CS 141: Introduction to Programming and Problem Solving
+ * Professor: Edwin Rodr&iacute;guez
+ *
+ * Programming Assignment EXTRA CREDIT
+ *
+ * Administration program for a veterinary office. Can be used to make appointments.
+ *
+ * Anthony Nguyen
+ *
+ *
+ */
+
+/**
+ * 
+ * This class is an abstract class that represents all animals. It has a field
+ * called species which determines the type of animal. There are also fields for
+ * the owner of the animal, the name, the age, the appointments, history,
+ * vaccinations, and the breed of animal.
+ * 
+ * @author Anthony Nguyen
  *
  */
 public abstract class Animal implements Serializable, Comparable<Animal> {
@@ -87,8 +108,11 @@ public abstract class Animal implements Serializable, Comparable<Animal> {
 		this.medicalHistory = medicalHistory;
 	}
 
+	/**
+	 * @return A string that shows all of the medical history.
+	 */
 	public String medToString() {
-		if (medicalHistory.isEmpty()){
+		if (medicalHistory.isEmpty()) {
 			return "NONE";
 		}
 		ArrayList<MedicalRecord> list = medicalHistory;
@@ -97,13 +121,16 @@ public abstract class Animal implements Serializable, Comparable<Animal> {
 
 		for (MedicalRecord s : list) {
 			if (s.isCurrent())
-			listString += "[CURRENT]";
-			listString += s.getInfo()+ " | ";
+				listString += "[CURRENT]";
+			listString += s.getInfo() + " | ";
 		}
 
 		return listString;
 	}
 
+	/**
+	 * @return A string that shows all of the vaccinations.
+	 */
 	public ArrayList<String> getVaccinations() {
 		return vaccinations;
 	}
@@ -111,9 +138,9 @@ public abstract class Animal implements Serializable, Comparable<Animal> {
 	public void setVaccinations(ArrayList<String> vaccinations) {
 		this.vaccinations = vaccinations;
 	}
-	
+
 	public String vacToString() {
-		if (vaccinations.isEmpty()){
+		if (vaccinations.isEmpty()) {
 			return "NONE";
 		}
 		ArrayList<String> list = vaccinations;
@@ -146,16 +173,19 @@ public abstract class Animal implements Serializable, Comparable<Animal> {
 	public ArrayList<Appointment> getAppointments() {
 		return appointments;
 	}
-	
+
+	/**
+	 * @return A string that shows all of the appointments.
+	 */
 	public String appToString() {
-		if (appointments.isEmpty()){
+		if (appointments.isEmpty()) {
 			return "NONE";
 		}
 		ArrayList<Appointment> list = appointments;
 
 		String listString = "| ";
 		for (Appointment s : list) {
-			listString += list.indexOf(s) + s.getTime() + " " + s.getDate()+ " | ";
+			listString += list.indexOf(s) + s.getTime() + " " + s.getDate() + " | ";
 		}
 
 		return listString;

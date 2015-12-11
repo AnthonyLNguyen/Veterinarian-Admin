@@ -6,7 +6,22 @@ package edu.cpp.cs.cs141.extracredit;
 import java.io.*;
 
 /**
- * @author antho
+ * 
+ *
+ * CS 141: Introduction to Programming and Problem Solving
+ * Professor: Edwin Rodr&iacute;guez
+ *
+ * Programming Assignment EXTRA CREDIT
+ *
+ * Administration program for a veterinary office. Can be used to make appointments.
+ *
+ * Anthony Nguyen
+ *
+ *
+ */
+
+/**
+ * @author Anthony Nguyen
  *
  */
 public class Save implements Serializable{
@@ -21,14 +36,14 @@ public class Save implements Serializable{
 		engine = null;
 	}
 	public Save(Engine g) {
-		setGameState(g);
+		setState(g);
 	}
 	
-	public void setGameState (Engine g) {
+	public void setState (Engine g) {
 		engine = g;
 	}
 	
-	public void saveGame(String gameStateName){
+	public void save(String gameStateName){
 		FileOutputStream fos;
 		try {
 			fos = new FileOutputStream(gameStateName + ".dat");
@@ -40,10 +55,10 @@ public class Save implements Serializable{
 		}
 	}
 	
-	public Engine loadGame(String gameStateName) {
+	public Engine load(String stateName) {
 		FileInputStream fis;
 		try {
-			fis = new FileInputStream(gameStateName + ".dat");
+			fis = new FileInputStream(stateName + ".dat");
 			ObjectInputStream ois = new ObjectInputStream(fis);
 			engine = (Engine) ois.readObject();
 			fis.close();

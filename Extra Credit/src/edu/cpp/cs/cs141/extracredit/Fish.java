@@ -6,7 +6,22 @@ package edu.cpp.cs.cs141.extracredit;
 import java.io.Serializable;
 
 /**
- * @author antho
+ * 
+ *
+ * CS 141: Introduction to Programming and Problem Solving
+ * Professor: Edwin Rodr&iacute;guez
+ *
+ * Programming Assignment EXTRA CREDIT
+ *
+ * Administration program for a veterinary office. Can be used to make appointments.
+ *
+ * Anthony Nguyen
+ *
+ *
+ */
+
+/**
+ * @author Anthony Nguyen
  *
  */
 public class Fish extends Animal implements Serializable {
@@ -23,6 +38,9 @@ public class Fish extends Animal implements Serializable {
 		setTypes(types);
 	}
 
+	/**
+	 * @return A string that displays all of the different breed of fish.
+	 */
 	public static String typeList(){
 		String s = "";
 		for (int i = 0 ; i < 5 ; i++)

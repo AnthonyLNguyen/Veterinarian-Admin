@@ -9,7 +9,22 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
- * @author antho
+ * 
+ *
+ * CS 141: Introduction to Programming and Problem Solving
+ * Professor: Edwin Rodr&iacute;guez
+ *
+ * Programming Assignment EXTRA CREDIT
+ *
+ * Administration program for a veterinary office. Can be used to make appointments.
+ *
+ * Anthony Nguyen
+ *
+ *
+ */
+
+/**
+ * @author Anthony Nguyen
  *
  */
 public class UserInterface {
@@ -226,7 +241,7 @@ public class UserInterface {
 		System.out.println("Enter a name for the save file");
 		String saveName = input.next();
 		save = new Save(engine);
-		save.saveGame(saveName);
+		save.save(saveName);
 		System.out.println("Game has been saved! \nThe save state is called " + saveName);
 	}
 
@@ -237,7 +252,7 @@ public class UserInterface {
 		System.out.println("What is the name of the save you would like to load? (Don't include extention)");
 		String saveName = input.next();
 		save = new Save();
-		engine = save.loadGame(saveName);
+		engine = save.load(saveName);
 		start();
 
 	}
